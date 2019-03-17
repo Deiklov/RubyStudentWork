@@ -1,0 +1,44 @@
+<div id="explicit__container">
+  <p><%= t('calcfile.enterarray') %></p>
+  <%= form_with id: 'explicit__form', method: :get, url: calc_ajax_path do |form| %>
+    <%= form.text_field :string, placeholder: t('calcfile.enternumber'),
+                        :value => "45 5 -2 34 12 17 56 790 345 21"%>
+    <%= form.submit t('calcfile.run'), id:'formSubmit'%>
+  <% end %>
+  <br><hr>
+  <div id="ajax_result">
+    <div class="col-8">
+      <table class="table thead-light" id="result_table" ></table>
+    </div>
+  </div>
+<%= link_to t('articles.common.back'),calc_work_path, :class => 'btn btn-light btn-sm' %>
+</div>
+<!--<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const container = document.querySelector('#explicit__container');
+
+        if (!container) return;
+
+        const form = container.querySelector('#explicit__form');
+        const result_div = container.querySelector('#quant');
+        form.addEventListener('ajax:success', function(evt) {
+            const response = evt.detail[0];
+            const json_obj = JSON.parse(JSON.stringify(response));
+            let table = document.querySelector('#result_table');
+            table.innerHTML = '<tr><th scope="col">Number</th><th scope="col">Array</th><th scope="col">Max len</th></tr>';
+            if (!json_obj.key) {
+                result_div.innerHTML = "<h3>" + json_obj.error + "</h3>";
+            }
+            else {
+                for (let i=0;i<json_obj.arrlist.length; i++)
+                {
+                    json_obj.arrlist[i].length==json_obj.maxlen ? res=true: res=false
+                    table.innerHTML+="<tr><th scope='row'>"+(i+1)+"</th><td>"+json_obj.arrlist[i].join(' ')+ "</td><td>"+res+"</td></tr>"
+                }
+                table.innerHTML+="<tr><th scope='row' id='len'>Max length "+json_obj.maxlen+"</th></tr>"
+
+            }
+            result_div.innerHTML="<h3 id='quantity'>Total quantity is "+json_obj.arrlist.length+ "</h3>"
+        });
+    });
+</script>-->

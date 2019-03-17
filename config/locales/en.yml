@@ -1,0 +1,110 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  application:
+    title: "Help students"
+    contacts: "Contacts"
+    company: "Andrey company"
+    logout: "Logout"
+    signup: "Sign up"
+    login: "Login"
+  main:
+    calc: "Calculate!"
+    sin: "Sin"
+    cos: "Cos"
+    tan: "Tan"
+    ctg: "Ctg"
+    asin: "Arcsin"
+    acos: "Arccos"
+    atan: "Arctg"
+    actg: "Arcctg"
+    title: "This is demo features"
+    enternumber: "Enter number in gradus"
+    work: "Work"
+    articles: "Articles"
+    contacts: "Contacts"
+  work:
+    noknod: "NOK & NOD"
+    sort: "Sort array"
+    comb: "Combinatoric"
+    trig: "Trigonometric"
+    title: "Basic menu of application"
+  articles:
+    title: "Articles for users"
+    new: "New post"
+    show: "Show"
+    edit: "Edit"
+    destroy: "Destroy"
+    common:
+      title: "Title"
+      text: "Text"
+      mustadmin: "You must to be admin"
+      back: "Back"
+      save: "Save"
+    editing: "Editing article"
+  calcfile:
+    firstnumber: "Firstnumber"
+    secondnumber: "Secondnumber"
+    enternumber: "Enternumber"
+    run: "Run!"
+    enterarray: "Enter array for sorting"
+    k: "Enter first number(k) "
+    n: "Enter second number(n) "
+  contacts:
+    title: "Contacts"
+    mail: "Send letter on mail"
+    questions: "Call for all questions"
+    address: "Moscow, Izmailovsky prospekt, 73/2, flat 533"
+    go: "Visit our office"
+  confirm:
+    sure: "Are you sure?"
+  devise:
+    email: "email"
+    password: "password"
+    new-password: "new password"
+    password_confirmation: "password confirmation"
+    sign_up: "sign up"
+    min: " characters minimum"
+    resend_confirmation: "Resend confirmation instructions"
+    log_in: "Log in"
+    forgot_pass: "Forgot your password?"
+    remember_me: "Remember me"
+    curr_password: "Current password"
+    password_instructions: "Resend me password instructions"
+    forgot: "Forgot your password?"
+    edit_user: "Edit user"
+    leave_blank: "(leave blank if you don't want to change it)"
+    update: "Update"
+    we_need: "(we need your current password to confirm your changes)"
+    cancel: "Cancel my account"
+    sure: "Are you sure?"
+    back: "Back"

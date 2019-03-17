@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-4 h5"><%= link_to t('main.work'), calc_work_path %></div>
+  <div class="col-4 h5"><%= link_to t('main.articles'), calc_articles_path %></div>
+  <div class="col-4 h5"><%= link_to t('main.contacts'), calc_contacts_path %></div>
+</div>
+<h2><%=t ("main.title")  %></h2>
+<div id="explicit__container">
+  <%= form_with id: 'explicit__form', method: :get, url: calc_ajaxtrig_path do |form| %>
+    <%= form.label :number, t('main.enternumber') %>
+    <%= form.text_field :number, :value => "45" %><br>
+    <div class="row">
+      <div class="col-6">
+        <%= form.radio_button(:trig, "sin") %>
+        <%= form.label :trig_sin, t('main.sin') %><br>
+        <%= form.radio_button(:trig, "cos") %>
+        <%= form.label :trig_cos, t('main.cos') %><br>
+        <%= form.radio_button(:trig, "tg") %>
+        <%= form.label :trig_tg, t('main.tan') %><br>
+        <%= form.radio_button(:trig, "ctg") %>
+        <%= form.label :trig_ctg, t('main.ctg')  %>
+      </div>
+      </div>
+    <%= form.submit t ("main.calc"), id:'formSubmit'%>
+  <% end %>
+  <br><hr>
+  <div id="ajax_result">
+    <div class="col-8">
+      <table class="table thead-light" id="result_table" ></table>
+    </div>
+  </div>
+
+</div>

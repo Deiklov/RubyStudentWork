@@ -1,0 +1,26 @@
+<%if current_user.admin then %>
+<h1><%= t "articles.editing" %></h1>
+<%= form_with(model: @article, local: true) do |form| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <% @article.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger"><%= msg %></div>
+      <% end %>
+    </div>
+  <% end %>
+  <p>
+    <%= form.label :title, t('articles.common.title') %><br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.label :text ,t('articles.common.text')%><br>
+    <%= form.text_area :body ,size: "75x15"%>
+  </p>
+  <p>
+    <%= form.submit t('articles.common.save')%>
+  </p>
+<% end %>
+<%= link_to t('articles.common.back'), calc_articles_path %>
+  <%else %>
+<div class="alert alert-info"><%= t('articles.common.mustadmin') %></div>
+<%end %>

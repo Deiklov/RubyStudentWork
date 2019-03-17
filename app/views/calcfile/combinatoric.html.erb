@@ -1,0 +1,18 @@
+<div id="explicit__container">
+  <%= form_with id: 'explicit__form', method: :get, url: calc_ajaxcomb_path do |form| %>
+    <div class="row">
+    <%= form.label(:number, t('calcfile.k')) %>&nbsp;
+    <%= form.text_field :firstnumber, size: "10"  %>&nbsp;
+    <%= form.label(:number, t('calcfile.n')) %>&nbsp;
+    <%= form.text_field :secondnumber,size: "10" %>&nbsp;&nbsp;
+    <%= form.submit t('main.calc'), id:'formSubmit'%></div>
+    ﻿<%=image_tag "comb.png", size: "700x400", alt: "Image with structure" %>
+  <% end %>
+  <br><hr>
+  <div id="ajax_result">
+    <div class="col-8">
+      <table class="table thead-light" id="result_table" ></table>
+    </div>
+  </div>
+  <%= link_to t('articles.common.back'),calc_work_path, :class => 'btn btn-light btn-sm' %>
+</div>

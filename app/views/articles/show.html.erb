@@ -1,0 +1,10 @@
+<p>
+  <strong><%=t('articles.common.title') %>:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong><%=t('articles.common.text') %>:</strong>
+  <%= @article.body %>
+</p>
+<%= link_to t('articles.common.back'),calc_articles_path, :class => 'btn btn-light' %>

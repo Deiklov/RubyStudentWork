@@ -1,0 +1,18 @@
+<div id="explicit__container">
+  <%= form_with id: 'explicit__form', method: :get, url: calc_ajaxnoknod_path do |form| %>
+    <%= form.label :firstnumber, t('calcfile.firstnumber') %>
+    <%= form.text_field :firstnumber, placeholder: t('calcfile.enternumber'), :value => "45" %>
+    <%= form.label :secondnumber, t('calcfile.secondnumber') %>
+    <%= form.text_field :secondnumber, placeholder: t('calcfile.enternumber'), :value => "12" %>
+    <%= form.submit t('calcfile.run'), id:'formSubmit'%>
+  <% end %>
+
+  <br><hr>
+
+  <div id="ajax_result">
+    <div class="col-8">
+      <table class="table thead-light" id="result_table" ></table>
+    </div>
+  </div>
+  <%= link_to t('articles.common.back'),calc_work_path, :class => 'btn btn-light btn-sm' %>
+</div>
